@@ -34131,8 +34131,16 @@ MonoBehaviour:
       target: {fileID: 0}
       SpeakEnd: 1
   npc: {fileID: 0}
-  textButtons: []
-  buttons: []
+  textButtons:
+  - {fileID: 1706915020}
+  - {fileID: 2061982372}
+  - {fileID: 668788405}
+  - {fileID: 947870522}
+  buttons:
+  - {fileID: 828643765}
+  - {fileID: 923373199}
+  - {fileID: 668556690}
+  - {fileID: 854379556}
   currentNode: 0
   ShowDialogue: 0
   answerButtons: []
