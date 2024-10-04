@@ -68,7 +68,19 @@ public class PlayerController : MonoBehaviour
         coins += count;
         coin_text.text = "money: "+coins.ToString();
     }
+    public static PlayerController instance;
+    private void Awake()
+    {
+        if (instance !=  null) 
+        {
+            instance = this;
 
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         health = 100;
@@ -77,16 +89,19 @@ public class PlayerController : MonoBehaviour
         capacity = maxcapacity;
         PlayerPrefs.SetInt("item getting", 1);
         PlayerPrefs.SetInt("Item getting2", 2);
+        AddCoin(1000);
 
     }
-
+    public void AddAmmo(int count)
+    {
+        ammo += count;
+        ammoText.text = ammo + "--" + capacity + "/" + maxcapacity;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Airdrop")
         {
-            ammo += 100;
-            ammoText.text = ammo + "--" + capacity + "/" + maxcapacity;
-
+            AddAmmo(100);
         }
         if (collision.collider.CompareTag("Item"))
         {

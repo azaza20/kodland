@@ -96,9 +96,9 @@ public class Dialog : MonoBehaviour
     public void Refresh()
     {
         //отключаем все кнопки из списка при вызове функции    
-        for (int i = 0; i < answerButtons.Count; i++)
+        for (int i = 0; i < buttons.Length; i++)
         {
-            answerButtons[i].SetActive(false);
+            buttons[i].SetActive(false);
         }
         //удаляем все данные из списка
         answerButtons.Clear();
