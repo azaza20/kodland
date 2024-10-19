@@ -14192,9 +14192,9 @@ RectTransform:
   m_Children:
   - {fileID: 1909295189}
   - {fileID: 828643766}
-  - {fileID: 923373200}
   - {fileID: 668556691}
   - {fileID: 854379557}
+  - {fileID: 923373200}
   m_Father: {fileID: 1543115610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -18238,14 +18238,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 302006863}
+      - m_Target: {fileID: 1392847985}
         m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
         m_MethodName: AnswerClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22355,14 +22355,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 302006863}
+      - m_Target: {fileID: 1392847985}
         m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
         m_MethodName: AnswerClicked
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -22983,7 +22983,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 302006863}
+      - m_Target: {fileID: 1392847985}
         m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
         m_MethodName: AnswerClicked
         m_Mode: 3
@@ -24757,7 +24757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 302006863}
+      - m_Target: {fileID: 1392847985}
         m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
         m_MethodName: AnswerClicked
         m_Mode: 3
@@ -37691,7 +37691,7 @@ MonoBehaviour:
       questName: item getting
       Text: "\u041D\u0430\u043F\u043E\u043C\u043D\u0438\u0438 \u0447\u0442\u043E
         \u043D\u0443\u0436\u043D\u043E?"
-      ToNode: 1
+      ToNode: 2
       GetMoney: 0
       destroyTarget: 0
       target: {fileID: 0}
@@ -37703,7 +37703,7 @@ MonoBehaviour:
       needQuestValue: 1
       questName: item getting
       Text: "\u0425\u043E\u0440\u043E\u0448\u043E \u0431\u0435\u0440\u0443 \u0434\u0435\u043B\u043E"
-      ToNode: 4
+      ToNode: 0
       GetMoney: 100
       destroyTarget: 0
       target: {fileID: 1808225858}
@@ -37723,7 +37723,7 @@ MonoBehaviour:
       needQuestValue: 2
       questName: item getting
       Text: "\u0418\u0434\u0443 \u0437\u0430 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u043C"
-      ToNode: 4
+      ToNode: 0
       GetMoney: 0
       destroyTarget: 0
       target: {fileID: 1808225858}
@@ -37741,14 +37741,14 @@ MonoBehaviour:
   npc: {fileID: 0}
   textButtons:
   - {fileID: 1706915020}
-  - {fileID: 2061982372}
   - {fileID: 668788405}
   - {fileID: 947870522}
+  - {fileID: 2061982372}
   buttons:
   - {fileID: 828643765}
-  - {fileID: 923373199}
   - {fileID: 668556690}
   - {fileID: 854379556}
+  - {fileID: 923373199}
   currentNode: 0
   ShowDialogue: 0
   answerButtons: []
@@ -40260,15 +40260,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 419994, guid: 8e7198429e0a8e54184feff5e4259bf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.972
+      value: 59.95
       objectReference: {fileID: 0}
     - target: {fileID: 419994, guid: 8e7198429e0a8e54184feff5e4259bf3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.016
       objectReference: {fileID: 0}
     - target: {fileID: 419994, guid: 8e7198429e0a8e54184feff5e4259bf3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.603073
+      value: -40.42
       objectReference: {fileID: 0}
     - target: {fileID: 419994, guid: 8e7198429e0a8e54184feff5e4259bf3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53110,71 +53110,57 @@ MonoBehaviour:
       \u0447\u0442\u043E \u0442\u044B \u0434\u043E\u043B\u0436\u0435\u043D \u043C\u043D\u0435
       \u043F\u0440\u0438\u043D\u0435\u0441\u0442\u0438 \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
     PlayerAnswer:
-    - questValue: 1
-      needQuestValue: 1
+    - questValue: 3
+      needQuestValue: 3
       questName: item getting
-      Text: "\u0414\u0430 \u044D\u0442\u043E \u044F \u0434\u0435\u0440\u0436\u0438
-        \u043F\u0440\u0435\u0434\u043C\u0435\u0442"
-      ToNode: 4
-      GetMoney: 100
-      destroyTarget: 1
-      target: {fileID: 0}
-      SpeakEnd: 0
-    - questValue: 0
-      needQuestValue: 0
-      questName: 
-      Text: "\u0414\u0430 \u044D\u0442\u043E \u044F \u043D\u043E \u044F \u0435\u0449\u0435
-        \u0435\u0433\u043E \u043D\u0435 \u043F\u0440\u0438\u043D\u0435\u0441"
-      ToNode: 4
+      Text: "\u0413\u043E\u0442\u043E\u0432\u043E"
+      ToNode: 1
       GetMoney: 0
       destroyTarget: 0
       target: {fileID: 0}
       SpeakEnd: 0
-  - NpcText: "\u041E\u0445 \u0441\u043F\u0430\u0441\u0438\u0431\u043E,\u0434\u0435\u0440\u0436\u0438
-      \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
-    PlayerAnswer:
-    - questValue: 1
-      needQuestValue: 1
+    - questValue: 2
+      needQuestValue: 2
       questName: item getting
-      Text: "\u043D\u043E \u044D\u0442\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-        \u043C\u0430\u043B\u043E"
-      ToNode: 4
-      GetMoney: 500
+      Text: "\u041E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0441\u044C"
+      ToNode: 0
+      GetMoney: 0
       destroyTarget: 1
       target: {fileID: 0}
-      SpeakEnd: 0
-  - NpcText: "\u0418 \u0447\u0442\u043E \u0442\u044B \u0442\u0443\u0442 \u0442\u043E\u0433\u0434\u0430
-      \u0434\u0435\u043B\u0430\u0435\u0448\u044C?"
-    PlayerAnswer:
-    - questValue: 0
-      needQuestValue: 0
-      questName: 
-      Text: ...
+      SpeakEnd: 1
+    - questValue: 2
+      needQuestValue: 2
+      questName: item getting
+      Text: "\u0414\u0430 \u044D\u0442\u043E \u044F \u043D\u043E \u044F \u0435\u0449\u0435
+        \u0435\u0433\u043E \u043D\u0435 \u043F\u0440\u0438\u043D\u0435\u0441"
       ToNode: 0
       GetMoney: 0
       destroyTarget: 0
       target: {fileID: 0}
       SpeakEnd: 1
-  - NpcText: "\u0415\u0441\u043B\u0438 \u044D\u0442\u043E \u043C\u0430\u043B\u043E
-      \u0442\u043E \u0442\u043E\u0433\u0434\u0430 \u043F\u0440\u0438\u043D\u0435\u0441\u0438
-      \u0435\u0449\u0435 \u043E\u0434\u0438\u043D \u043F\u0440\u0435\u0434\u043C\u0435\u0442
-      \u0442\u043E\u043C\u0443 \u0442\u0430\u043D\u0446\u043E\u0440\u0443"
+  - NpcText: "\u041E\u0445 \u0441\u043F\u0430\u0441\u0438\u0431\u043E,\u0434\u0435\u0440\u0436\u0438
+      \u043D\u0430\u0433\u0440\u0430\u0434\u0443"
     PlayerAnswer:
-    - questValue: 2
-      needQuestValue: 2
-      questName: Item getting2
-      Text: "\u041D\u0443 \u043B\u0430\u0434\u043D\u043E"
-      ToNode: 5
-      GetMoney: 0
-      destroyTarget: 0
-      target: {fileID: 393666082}
+    - questValue: 4
+      needQuestValue: 3
+      questName: item getting
+      Text: "\u043D\u043E \u044D\u0442\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043C\u0430\u043B\u043E"
+      ToNode: 0
+      GetMoney: 500
+      destroyTarget: 1
+      target: {fileID: 0}
       SpeakEnd: 1
   npc: {fileID: 0}
   textButtons:
   - {fileID: 1706915020}
+  - {fileID: 668788405}
+  - {fileID: 947870522}
   - {fileID: 2061982372}
   buttons:
   - {fileID: 828643765}
+  - {fileID: 668556690}
+  - {fileID: 854379556}
   - {fileID: 923373199}
   currentNode: 0
   ShowDialogue: 0
