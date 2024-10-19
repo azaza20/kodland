@@ -40,8 +40,7 @@ public class Dialog : MonoBehaviour
         {
             _color.Invoke();
         }
-        Debug.Log(button);
-        Debug.Log(node[currentNode].PlayerAnswer.Length);
+
         if (node[currentNode].PlayerAnswer[button].SpeakEnd)
         {
             dialogue.SetActive(false);
@@ -96,7 +95,7 @@ public class Dialog : MonoBehaviour
     }
     public void Refresh()
     {
-        //отключаем все кнопки из списка при вызове функции
+        //отключаем все кнопки из списка при вызове функции    
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].SetActive(false);
@@ -106,6 +105,7 @@ public class Dialog : MonoBehaviour
         npc.text = node[currentNode].NpcText;
         for (int i = 0; i < node[currentNode].PlayerAnswer.Length; i++)
         {
+            buttons[i].SetActive(false);
             //включаем кнопку, если в поле questName нет записей
             if (node[currentNode].PlayerAnswer[i].questName == "" ||
                     //включаем кнопку, если поле needQuestValue совпадает с требуемым
@@ -113,10 +113,8 @@ public class Dialog : MonoBehaviour
                         PlayerPrefs.GetInt(node[currentNode].PlayerAnswer[i].questName))
             {
                 //добавляем данную кнопку в список
-                textButtons[answerButtons.Count].text = node[currentNode].PlayerAnswer[i].Text;
-                answerButtons.Add(buttons[answerButtons.Count]);
-                
-                
+                answerButtons.Add(buttons[i]);
+                textButtons[i].text = node[currentNode].PlayerAnswer[i].Text;
             }
         }
         //включаем кнопки из списка      
