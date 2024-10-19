@@ -113,15 +113,15 @@ public class PlayerController : MonoBehaviour
                 PlayerPrefs.SetInt("item getting", 3);
             }
         }
-       if (collision.collider.CompareTag("Item2"))
-        {
-            if (PlayerPrefs.GetInt("Item getting2") == 4)
-            {
-                dialogue.target.transform.position = questTarget.transform.position;
-                Destroy(collision.gameObject);
-                PlayerPrefs.SetInt("Item getting2", 5);
-            }
-        }
+       //if (collision.collider.CompareTag("Item2"))
+       // {
+       //     if (PlayerPrefs.GetInt("Item getting2") == 4)
+       //     {
+       //         dialogue.target.transform.position = questTarget.transform.position;
+       //         Destroy(collision.gameObject);
+       //         PlayerPrefs.SetInt("Item getting2", 5);
+       //     }
+       // }
             
             if (collision.gameObject.tag == "Airdrop2")
             {
