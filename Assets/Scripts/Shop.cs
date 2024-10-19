@@ -70,10 +70,12 @@ public class Shop : MonoBehaviour
         {
             canvas[0].SetActive(false);
             canvas[1].SetActive(true);
+            canvas[2].SetActive(false);
             isOpen = true;
         }
         else
         {
+            canvas[2].SetActive (false);
             canvas[1].SetActive(false);
             canvas[0].SetActive(true);
             isOpen = false;
