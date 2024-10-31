@@ -17,6 +17,7 @@ TagManager:
   - Dialogue
   - Item
   - Item2
+  - car
   layers:
   - Default
   - TransparentFX

@@ -6,42 +6,26 @@ using UnityEngine.UI;
 public class Car : MonoBehaviour
 {
     [SerializeField] Axis[] CarAxis;
-    [SerializeField] Joystick Drive;
-    [SerializeField] float motorSpeed;
-    [SerializeField] float MaxWheel;
+    
     [SerializeField] float BreakForce;
     [SerializeField] Transform COM;
     Rigidbody rb;
     bool isBreak;
     [SerializeField] TrailRenderer leftWheel;
     [SerializeField] TrailRenderer rightWheel;
-    [SerializeField] List<GameObject> canvas;
-    bool isOpen;
+    AudioSource engineAudio;
+    public Joystick joystick;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = COM.localPosition;
+        engineAudio = GetComponent<AudioSource>();
+        
         
     }
-    public void OpenCarCanvas()
-    {
-        if(!isOpen)
-        {
-            canvas[0].SetActive(false);
-            canvas[1].SetActive(false);
-            canvas[2].SetActive(true);
-            isOpen = true;
-        }
-        else
-        {
-            canvas[0].SetActive(true);
-            canvas[1].SetActive(false);
-            canvas[2].SetActive(false);
-            isOpen = false;
-        }
-    }
+    
     // Update is called once per frame
     public void StopOn()
     {
@@ -64,11 +48,19 @@ public class Car : MonoBehaviour
         collider.RightObj.transform.position = position;
         collider.RightObj.transform.rotation = rotation;
     }
-    void Update()
+    private void FixedUpdate(Joystick joystick)
     {
 
-        float motor = motorSpeed * Drive.Vertical;
-        float Angle = Drive.Horizontal * MaxWheel;
+        float pi = Mathf.Lerp(0.6f, 1.6f, Mathf.Abs(joystick.Vertical));
+        GetComponent<AudioSource>().pitch = Mathf.Lerp(GetComponent<AudioSource>().pitch, pi, 0.01f);
+    }
+    public float motor;
+    public float Angle; 
+    void Update()
+    {
+      
+
+       
         foreach ( Axis axis in CarAxis)
         {
             if (axis.steering) 
